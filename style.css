@@ -442,6 +442,7 @@ h1{
   gap:20px;
   align-items:baseline;
 }
+.schedule-talk{align-items:start}
 .schedule-talk{
   padding:8px 0;
   color:#f4f6f8;
@@ -461,8 +462,27 @@ h1{
   white-space:nowrap;
 }
 .schedule-talk .schedule-title{
+  min-width:0;
+  display:block;
   font-size:.98rem;
   letter-spacing:.01em;
+}
+.schedule-speaker{
+  display:block;
+  color:#f4f6f8;
+}
+.talk-subtitle{
+  display:block;
+  margin-top:2px;
+  color:#aebdca;
+  font-size:.80rem;
+  line-height:1.38;
+  letter-spacing:0;
+  overflow-wrap:anywhere;
+}
+.talk-subtitle sub{
+  font-size:.75em;
+  line-height:0;
 }
 .schedule-break{
   padding:4px 0;
@@ -592,16 +612,39 @@ footer{
     gap:20px;
   }
   .schedule-day-date{margin-top:0}
-  .schedule-talk,
+  .schedule-talk{
+    grid-template-columns:82px minmax(0,1fr);
+    gap:3px 10px;
+    align-items:start;
+  }
   .schedule-break{
-    grid-template-columns:92px minmax(0,1fr) max-content;
+    grid-template-columns:82px minmax(0,1fr);
     gap:10px;
   }
-  .schedule-talk .schedule-title{
-    min-width:0;
-    overflow-wrap:break-word;
+  .schedule-talk time{
+    grid-column:1;
+    grid-row:1 / span 2;
+    font-size:.8rem;
   }
-  .schedule-talk time{font-size:.8rem}
+  .schedule-talk .schedule-title{
+    grid-column:2;
+    grid-row:1;
+    min-width:0;
+    overflow-wrap:anywhere;
+  }
+  .schedule-talk .schedule-room{
+    grid-column:2;
+    grid-row:2;
+    justify-self:start;
+    text-align:left;
+    white-space:normal;
+    margin-top:1px;
+  }
+  .talk-subtitle{
+    margin-top:3px;
+    font-size:.78rem;
+    line-height:1.4;
+  }
   .hero-details{display:block}
   .hero-details p + p{margin-top:8px}
   .participant-row{grid-template-columns:1fr auto;gap:14px}
