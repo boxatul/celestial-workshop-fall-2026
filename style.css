@@ -572,6 +572,42 @@ footer{
   color:#dbe4ec;
 }
 .footer-inner a:hover{color:#fff}
+@media (min-width:901px){
+  .schedule-day{
+    grid-template-columns:160px minmax(0,1fr);
+    gap:24px;
+  }
+  .schedule-talk:has(.talk-subtitle){
+    grid-template-columns:105px minmax(0,1fr) max-content;
+    grid-template-rows:auto auto;
+    gap:2px 16px;
+  }
+  .schedule-talk:has(.talk-subtitle) .schedule-title{
+    display:contents;
+  }
+  .schedule-talk:has(.talk-subtitle) time{
+    grid-column:1;
+    grid-row:1;
+  }
+  .schedule-talk:has(.talk-subtitle) .schedule-speaker{
+    grid-column:2;
+    grid-row:1;
+  }
+  .schedule-talk:has(.talk-subtitle) .schedule-room{
+    grid-column:3;
+    grid-row:1;
+    justify-self:end;
+  }
+  .schedule-talk:has(.talk-subtitle) .talk-subtitle{
+    grid-column:2 / 4;
+    grid-row:2;
+    margin-top:0;
+    white-space:nowrap;
+    overflow-wrap:normal;
+    font-size:.76rem;
+    line-height:1.35;
+  }
+}
 @media (max-width:900px){
   .site-header{position:static}
   .nav-wrap{align-items:flex-start;flex-direction:column}
