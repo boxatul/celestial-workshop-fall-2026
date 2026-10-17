@@ -577,10 +577,16 @@ footer{
     grid-template-columns:160px minmax(0,1fr);
     gap:24px;
   }
-  .schedule-talk:has(.talk-subtitle){
-    grid-template-columns:105px minmax(0,1fr) max-content;
-    grid-template-rows:auto auto;
+  .schedule-talk{
+    grid-template-columns:110px minmax(0,1fr) 210px;
     gap:2px 16px;
+    align-items:start;
+  }
+  .schedule-talk .schedule-room{
+    justify-self:end;
+  }
+  .schedule-talk:has(.talk-subtitle){
+    grid-template-rows:auto auto;
   }
   .schedule-talk:has(.talk-subtitle) .schedule-title{
     display:contents;
@@ -596,7 +602,6 @@ footer{
   .schedule-talk:has(.talk-subtitle) .schedule-room{
     grid-column:3;
     grid-row:1;
-    justify-self:end;
   }
   .schedule-talk:has(.talk-subtitle) .talk-subtitle{
     grid-column:2 / 4;
