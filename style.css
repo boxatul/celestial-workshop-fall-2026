@@ -461,6 +461,21 @@ h1{
   justify-self:stretch;
   white-space:nowrap;
 }
+.schedule-slides{
+  margin-left:10px;
+  color:#dbe7f2;
+  font-size:.68rem;
+  font-weight:600;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  border-bottom:1px solid rgba(219,231,242,.35);
+  padding-bottom:1px;
+  white-space:nowrap;
+}
+.schedule-slides:hover{
+  color:#fff;
+  border-bottom-color:#fff;
+}
 .schedule-talk .schedule-title{
   min-width:0;
   display:block;
@@ -681,6 +696,7 @@ footer{
     white-space:normal;
     margin-top:1px;
   }
+  .schedule-slides{margin-left:8px}
   .talk-subtitle{
     margin-top:3px;
     font-size:.78rem;
