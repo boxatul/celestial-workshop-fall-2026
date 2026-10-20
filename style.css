@@ -462,7 +462,7 @@ h1{
   white-space:nowrap;
 }
 .schedule-slides{
-  margin-right:10px;
+  margin-right:18px;
   color:#dbe7f2;
   font-size:.68rem;
   font-weight:600;
@@ -696,7 +696,7 @@ footer{
     white-space:normal;
     margin-top:1px;
   }
-  .schedule-slides{margin-left:0;margin-right:8px}
+  .schedule-slides{margin-left:0;margin-right:12px}
   .talk-subtitle{
     margin-top:3px;
     font-size:.78rem;
